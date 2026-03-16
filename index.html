@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>秒読みくん - サポート | Byoyomi-kun Support</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .header h1 {
+      font-size: 2rem;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .header p {
+      color: #999;
+      font-size: 0.95rem;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .section h2 {
+      font-size: 1.2rem;
+      color: #ffffff;
+      border-bottom: 1px solid #333;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+    .section p, .section li {
+      color: #ccc;
+      margin-bottom: 8px;
+    }
+    .section ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #6ca6e0;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .lang-switch {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .lang-switch button {
+      background: none;
+      border: 1px solid #555;
+      color: #ccc;
+      padding: 6px 16px;
+      margin: 0 4px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .lang-switch button.active {
+      background: #333;
+      color: #fff;
+      border-color: #888;
+    }
+    .lang { display: none; }
+    .lang.active { display: block; }
+    .footer {
+      text-align: center;
+      color: #666;
+      font-size: 0.85rem;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>秒読みくん</h1>
+      <p>Byoyomi-kun — Shogi Game Clock</p>
+    </div>
+
+    <div class="lang-switch">
+      <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
+      <button id="btn-en" onclick="switchLang('en')">English</button>
+    </div>
+
+    <!-- 日本語 -->
+    <div id="ja" class="lang active">
+      <div class="section">
+        <h2>アプリについて</h2>
+        <p>「秒読みくん」は将棋・囲碁などの対局で使えるゲームクロックアプリです。</p>
+        <ul>
+          <li>秒読み・フィッシャーの2つの時間制御に対応</li>
+          <li>考慮時間（秒読みモード）に対応</li>
+          <li>音声読み上げ機能（8種類の読み手）</li>
+          <li>カラーテーマ切替・バイブレーション</li>
+          <li>プリセット＆カスタム設定の保存</li>
+          <li>日本語・英語対応</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>お問い合わせ</h2>
+        <p>バグの報告、ご要望、その他のお問い合わせは下記メールアドレスまでご連絡ください。</p>
+        <p><a href="mailto:support.lumithick@gmail.com">support.lumithick@gmail.com</a></p>
+      </div>
+
+      <div class="section">
+        <h2>リンク</h2>
+        <p><a href="./privacy-policy.html">プライバシーポリシー</a></p>
+      </div>
+    </div>
+
+    <!-- English -->
+    <div id="en" class="lang">
+      <div class="section">
+        <h2>About the App</h2>
+        <p>Byoyomi-kun is a game clock app for board games such as Shogi and Go.</p>
+        <ul>
+          <li>Supports byoyomi and Fischer time controls</li>
+          <li>Consideration time support (byoyomi mode)</li>
+          <li>Voice announcements (8 voice characters)</li>
+          <li>Color themes and vibration</li>
+          <li>Preset and custom settings</li>
+          <li>Japanese and English support</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Contact</h2>
+        <p>For bug reports, feature requests, or any other inquiries, please contact us at:</p>
+        <p><a href="mailto:support.lumithick@gmail.com">support.lumithick@gmail.com</a></p>
+      </div>
+
+      <div class="section">
+        <h2>Links</h2>
+        <p><a href="./privacy-policy.html">Privacy Policy</a></p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2025 Lumithick Studio</p>
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-switch button').forEach(el => el.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+      document.getElementById('btn-' + lang).classList.add('active');
+    }
+  </script>
+</body>
+</html>
