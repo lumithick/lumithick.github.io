@@ -1,0 +1,22 @@
+<header class="site-header">
+  <div class="container">
+    <a href="{{ .Site.Home.RelPermalink }}" class="site-name">{{ .Site.Title }}</a>
+    <nav class="site-nav">
+      {{- if eq .Language.Lang "ja" }}
+      <a href="/ja/apps/">アプリ</a>
+      {{- else }}
+      <a href="/en/apps/">Apps</a>
+      {{- end }}
+      <div class="lang-switcher">
+        {{- $currentLang := .Language.Lang }}
+        {{- $currentPermalink := .Permalink }}
+        {{- $translations := dict $currentLang $currentPermalink }}
+        {{- range .Translations }}
+        {{- $translations = merge $translations (dict .Language.Lang .Permalink) }}
+        {{- end }}
+        <a href="{{ index $translations "ja" }}"{{ if eq $currentLang "ja" }} class="active"{{ end }}>日本語</a>
+        <a href="{{ index $translations "en" }}"{{ if eq $currentLang "en" }} class="active"{{ end }}>English</a>
+      </div>
+    </nav>
+  </div>
+</header>

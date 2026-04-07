@@ -1,0 +1,31 @@
+baseURL = "https://lumithick.github.io/"
+title = "Lumithick Studio"
+defaultContentLanguage = "ja"
+defaultContentLanguageInSubdir = true
+disableKinds = ["taxonomy"]
+
+[languages]
+  [languages.ja]
+    languageName = "日本語"
+    weight = 1
+    contentDir = "content/ja"
+    [languages.ja.params]
+      description = "Lumithick Studio -- アプリ開発者の公式サイト"
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    contentDir = "content/en"
+    [languages.en.params]
+      description = "Lumithick Studio -- Official App Developer Site"
+
+[params]
+  author = "Lumithick Studio"
+  email = "support.lumithick@gmail.com"
+  copyright = "2026 Lumithick Studio"
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+
+[sitemap]
+  filename = "sitemap.xml"

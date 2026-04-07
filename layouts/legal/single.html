@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="container">
+  <div class="back-link">
+    {{- if .Parent }}
+    <a href="{{ .Parent.Permalink }}">&larr; {{ if eq .Language.Lang "ja" }}戻る{{ else }}Back{{ end }}</a>
+    {{- else }}
+    <a href="{{ .Site.Home.Permalink }}">&larr; {{ if eq .Language.Lang "ja" }}トップページに戻る{{ else }}Back to Home{{ end }}</a>
+    {{- end }}
+  </div>
+  <div class="page-header">
+    <h1>{{ .Title }}</h1>
+  </div>
+  <div class="content legal-content">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}

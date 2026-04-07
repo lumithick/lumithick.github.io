@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  background: #1a1a1a;
+  color: #e0e0e0;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+a {
+  color: #6ca6e0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid #333;
+  padding: 16px 0;
+}
+
+.site-header .container {
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header .site-name {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-header .site-name:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.site-nav a {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.lang-switcher {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.lang-switcher a {
+  padding: 4px 10px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.lang-switcher a.active {
+  background: #333;
+  color: #fff;
+  border-color: #888;
+}
+
+/* Page header */
+.page-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+/* Content */
+.content h2 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.content p {
+  color: #ccc;
+  margin-bottom: 8px;
+}
+
+.content li {
+  color: #ccc;
+  margin-bottom: 8px;
+}
+
+.content ul {
+  padding-left: 20px;
+}
+
+/* App card */
+.app-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.app-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #242424;
+  border-radius: 12px;
+  border: 1px solid #333;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+
+.app-card:hover {
+  border-color: #6ca6e0;
+  text-decoration: none;
+}
+
+.app-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  background: #333;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  overflow: hidden;
+}
+
+.app-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.app-info h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.app-info p {
+  color: #999;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #333;
+}
+
+.footer-links {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #888;
+  margin: 0 8px;
+  font-size: 0.85rem;
+}
+
+/* Language selector page */
+.lang-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.lang-selector h1 {
+  color: #ffffff;
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+}
+
+.lang-selector .subtitle {
+  color: #999;
+  font-size: 1rem;
+  margin-bottom: 48px;
+}
+
+.lang-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.lang-buttons a {
+  display: block;
+  padding: 14px 40px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.lang-buttons a:hover {
+  background: #333;
+  border-color: #888;
+  text-decoration: none;
+}
+
+/* Legal page */
+.legal-content h2 {
+  font-size: 1.1rem;
+}
+
+.legal-content p,
+.legal-content li {
+  font-size: 0.95rem;
+}
+
+/* Back link */
+.back-link {
+  margin-bottom: 24px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .lang-selector h1 {
+    font-size: 1.8rem;
+  }
+
+  .lang-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .lang-buttons a {
+    padding: 12px 32px;
+  }
+
+  .app-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .site-header .container {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

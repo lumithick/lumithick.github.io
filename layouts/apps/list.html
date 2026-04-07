@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="container">
+  <div class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p>{{ . }}</p>{{ end }}
+  </div>
+
+  {{ if .Content }}
+  <div class="content">
+    {{ .Content }}
+  </div>
+  {{ else }}
+  <div class="app-list">
+    {{- range .Sections }}
+    <a href="{{ .Permalink }}" class="app-card">
+      <div class="app-icon">
+        {{- with .Params.icon }}<img src="{{ . }}" alt="{{ $.Title }}">{{ else }}&#9201;{{ end -}}
+      </div>
+      <div class="app-info">
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Params.tagline | default .Description }}</p>
+      </div>
+    </a>
+    {{- end }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}

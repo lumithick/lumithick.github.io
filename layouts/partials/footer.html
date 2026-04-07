@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="footer-links">
+    {{- if eq .Language.Lang "ja" }}
+    <a href="/ja/legal/privacy/">プライバシーポリシー</a>
+    <a href="mailto:{{ .Site.Params.email }}">お問い合わせ</a>
+    {{- else }}
+    <a href="/en/legal/privacy/">Privacy Policy</a>
+    <a href="mailto:{{ .Site.Params.email }}">Contact</a>
+    {{- end }}
+  </div>
+  <p>&copy; {{ .Site.Params.copyright }}</p>
+</footer>

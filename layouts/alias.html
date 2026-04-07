@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumithick Studio</title>
+  <meta name="description" content="Lumithick Studio -- Official App Developer Site">
+  <link rel="canonical" href="https://lumithick.github.io/">
+  <link rel="alternate" hreflang="ja" href="https://lumithick.github.io/ja/">
+  <link rel="alternate" hreflang="en" href="https://lumithick.github.io/en/">
+  <link rel="alternate" hreflang="x-default" href="https://lumithick.github.io/">
+  <meta property="og:title" content="Lumithick Studio">
+  <meta property="og:description" content="Lumithick Studio -- Official App Developer Site">
+  <meta property="og:url" content="https://lumithick.github.io/">
+  <meta property="og:site_name" content="Lumithick Studio">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="lang-selector">
+    <h1>Lumithick Studio</h1>
+    <p class="subtitle">App Developer</p>
+    <div class="lang-buttons">
+      <a href="/ja/">日本語</a>
+      <a href="/en/">English</a>
+    </div>
+  </div>
+  <script>
+    (function() {
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (lang.startsWith('ja')) {
+        window.location.replace('/ja/');
+      } else {
+        window.location.replace('/en/');
+      }
+    })();
+  </script>
+</body>
+</html>
